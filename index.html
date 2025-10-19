@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Quiz App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="registration" class="section">
+        <h1>Register for Quiz</h1>
+        <form id="regForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+            minlength="6"
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <p class="error" id="regError"></p>
+      </div>
+
+      <div id="quiz" class="section hidden">
+        <h1>Quiz</h1>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <p id="questionCount"></p>
+        <div id="questionText" class="question"></div>
+        <div id="options"></div>
+        <button id="nextBtn" disabled>Next</button>
+      </div>
+
+      <div id="results" class="section hidden">
+        <h1>Results</h1>
+        <p id="userName"></p>
+        <p id="score"></p>
+        <p id="passFail"></p>
+        <button id="retakeBtn">Retake Quiz</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
